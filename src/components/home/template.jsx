@@ -104,7 +104,7 @@ function Template() {
                                 || જય બાબા સ્વામી ||
                             </Typography>
                             <Typography sx={{fontSize: '20px', color: '#fff', fontWeight: 600, mt: 2}}>
-                                સમર્પણ પરિવાર વરાછા ઝોન, સુરત.
+                                સમર્પણ પરિવાર અમરોલી ઝોન, સુરત.
                             </Typography>
                             <Box sx={{height: '200px'}}>
                                 <img src={text} style={{width: '100%', height: '100%'}}/>
@@ -121,11 +121,10 @@ function Template() {
                             </Box>
                             <Box sx={{width: '335px'}}>
                                 <Typography sx={{fontSize: '20px', color: '#fff', fontWeight: 600}}>
-                                    સમય: સવારે 5 : 00
+                                    સમય: સવારે 6 : 00
                                 </Typography>
                                 <Typography sx={{fontSize: '20px', color: '#fff', fontWeight: 600}}>
-                                    સમય: S.M.C કોમ્યુનિટી હોલ, સુદામા ચોક થી ફાયર સ્ટેશન રોડ, વર્ણી પ્લાઝા ની સામે મોટા
-                                    વરાછા, સુરત.
+                                    સ્થળ: સીતારામ વાડી, પ્રમુખ પાર્ક ની સામે, સ્વામિનારાયણ મંદિરની બાજુમાં, છપરાભાઠા રોડ, અમરોલી સુરત.
                                 </Typography>
                             </Box>
                         </Box>
