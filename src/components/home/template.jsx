@@ -13,8 +13,6 @@ function Template() {
     const [adhayax, setAdhayax] = useState([]);
     const captureRef = useRef(null);
 
-    console.log(acharyas , '111111111111111111111');
-
     useEffect(() => {
         handleGet();
         handleachary();
@@ -105,7 +103,7 @@ function Template() {
                                 || જય બાબા સ્વામી ||
                             </Typography>
                             <Typography sx={{ fontSize: '20px', color: '#fff', fontWeight: 600, mt: 2 }}>
-                                સમર્પણ પરિવાર વરાછા ઝોન, સુરત.
+                                સમર્પણ પરિવાર અમરોલી ઝોન, સુરત.
                             </Typography>
                             <Box sx={{ height: '200px' }}>
                                 <img src={text} style={{ width: '100%', height: '100%' }} />
@@ -120,7 +118,7 @@ function Template() {
                                 <Typography sx={{ fontSize: '18px', color: '#fff', fontWeight: 600, display: 'flex' }}>
                                     સ્થળ:
                                     <Typography sx={{ fontSize: '18px', color: '#fff', fontWeight: 600, ml: 1 }}>
-                                        S.M.C કોમ્યુનિટી હોલ, <br />સુદામા ચોક થી ફાયર સ્ટેશન રોડ, <br />વર્ણી પ્લાઝા ની સામે મોટો વરાછા, સુરત.
+                                        સીતારામ વાડી, પ્રમુખ પાર્ક ની સામે, સ્વામિનારાયણ મંદિરની બાજુમાં, છપરાભાઠા રોડ, અમરોલી સુરત.
                                     </Typography>
                                 </Typography>
                             </Box>
@@ -130,7 +128,7 @@ function Template() {
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <Box sx={{ backgroundColor: '#FFF', borderRadius: '25px', m: 3, width: '100%' }}>
                             {acharyas.map((item, index) => (
-                                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} key={index}>
+                                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center",color:'#009FFF' }} key={index}>
                                     <Box sx={{ fontWeight: 600, fontSize: '20px', lineHeight: '40px', px: 2 }}>
                                         {item.gender === 'Female' ? 'આચાર્યા' : 'આચાર્ય'} : {item.name}
                                     </Box>
@@ -142,7 +140,7 @@ function Template() {
                         </Box>
                         <Box sx={{ backgroundColor: '#FFF', borderRadius: '25px', m: 3, width: '100%' }}>
                             {adhayax.map((item, index) => (
-                                <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center",color:'#009FFF' }}>
                                     <Box sx={{ px: 2, fontWeight: 600, fontSize: '20px', lineHeight: '40px' }}>
                                         {item.gender === 'Female' ? 'અધ્યક્ષા' : 'અધ્યક્ષ'} : {item.name}
                                     </Box>
@@ -197,23 +195,26 @@ function Template() {
                                         >
                                             {samitiName}
                                         </Typography>
-                                        {members.map((member, idx) => (
-                                            <Box
-                                                key={idx}
-                                                sx={{
-                                                    display: 'flex',
-                                                    justifyContent: 'space-between',
-                                                    mb: 1,
-                                                }}
-                                            >
-                                                <Typography sx={{ fontSize: '16px', fontWeight: 600 }}>
-                                                    {member.name}
-                                                </Typography>
-                                                <Typography sx={{ fontSize: '16px' }}>
-                                                    {member.number}
-                                                </Typography>
-                                            </Box>
-                                        ))}
+                                        {[...members]
+                                            .sort((a, b) => (a.color === '#392d74' ? -1 : b.color === '#392d74' ? 1 : 0))
+                                            .map((member, idx) => (
+                                                <Box
+                                                    key={idx}
+                                                    sx={{
+                                                        display: 'flex',
+                                                        justifyContent: 'space-between',
+                                                        mb: 1,
+                                                        color: member.color,
+                                                    }}
+                                                >
+                                                    <Typography sx={{ fontSize: '16px', fontWeight: 600 }}>
+                                                        {member.name}
+                                                    </Typography>
+                                                    <Typography sx={{ fontSize: '16px', fontWeight: 600 }}>
+                                                        {member.number}
+                                                    </Typography>
+                                                </Box>
+                                            ))}
                                     </Box>
                                 ))}
                             </Box>
